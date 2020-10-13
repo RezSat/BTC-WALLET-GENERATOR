@@ -106,12 +106,10 @@ def wif_to_key(wif):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generates private key, public key and wallet address from number')
-
-    parser.add_argument('number', type=int, nargs='?', default=1,
-                        help='A required integer number argument')
-    args = parser.parse_args()
-    int_to_address(args.number)
+    for x in range(50000,10000000000):
+        print(str(x))
+        int_to_address(x)
+        x = x + 1
 
 # int_to_address(12345678900987654321)
 
